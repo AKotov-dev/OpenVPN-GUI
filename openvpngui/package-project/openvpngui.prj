@@ -32,7 +32,7 @@ urlcopy=https://github.com/AKotov-dev/OpenVPN-GUI
 license=GPLv3+
 
 [DEPS]
-deps=openvpn polkit systemd fping
+deps=openvpn polkit systemd fping resolvconf procps-ng
 
 [META]
 meta=0
