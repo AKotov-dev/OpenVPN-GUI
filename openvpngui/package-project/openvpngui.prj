@@ -26,7 +26,7 @@ vendor=alex_q_2000 (C) 2020
 summary=GUI for OpenVPN (Client)
 
 [URLCOPY]
-urlcopy=https://cloud.mail.ru/public/2frV/4ijowDWPQ
+urlcopy=https://github.com/AKotov-dev/OpenVPN-GUI
 
 [LICENSE]
 license=GPLv3+
@@ -63,10 +63,10 @@ deb=0
 0=systemctl daemon-reload
 
 [URL32]
-url32=https://cloud.mail.ru/public/2frV/4ijowDWPQ
+url32=https://github.com/AKotov-dev/OpenVPN-GUI
 
 [URL64]
-url64=https://cloud.mail.ru/public/2frV/4ijowDWPQ
+url64=
 
 [PROGRAMNAME]
 programname=OpenVPN-GUI
