@@ -32,7 +32,7 @@ urlcopy=https://cloud.mail.ru/public/2frV/4ijowDWPQ
 license=GPLv3+
 
 [DEPS]
-deps=openvpn polkit systemd
+deps=openvpn polkit systemd fping
 
 [META]
 meta=0
