@@ -1,0 +1,245 @@
+object ConfigForm: TConfigForm
+  Left = 285
+  Height = 657
+  Top = 136
+  Width = 933
+  ActiveControl = FileListBox1
+  Caption = 'OpenVPN-GUI configuration'
+  ClientHeight = 657
+  ClientWidth = 933
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poDesktopCenter
+  SessionProperties = 'Height;Panel1.Width;Panel3.Height;Panel4.Height;Width'
+  LCLVersion = '1.8.4.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 657
+    Top = 0
+    Width = 266
+    Align = alLeft
+    ClientHeight = 657
+    ClientWidth = 266
+    TabOrder = 0
+    object GroupBox2: TGroupBox
+      Left = 1
+      Height = 655
+      Top = 1
+      Width = 264
+      Align = alClient
+      Caption = 'Configurations list:'
+      ClientHeight = 638
+      ClientWidth = 260
+      TabOrder = 0
+      object FileListBox1: TFileListBox
+        Left = 0
+        Height = 587
+        Top = 51
+        Width = 260
+        Align = alClient
+        BorderSpacing.Top = 4
+        BorderStyle = bsNone
+        Directory = '/home/marsik'
+        ItemHeight = 0
+        Mask = '*.ovpn'
+        MultiSelect = True
+        OnChange = FileListBox1Change
+        OnDblClick = StartBtnClick
+        TabOrder = 2
+        TopIndex = -1
+      end
+      object Panel4: TPanel
+        Left = 0
+        Height = 42
+        Top = 0
+        Width = 260
+        Align = alTop
+        BevelOuter = bvNone
+        ClientHeight = 42
+        ClientWidth = 260
+        TabOrder = 0
+        object LoadBtn: TButton
+          Left = 6
+          Height = 25
+          Top = 8
+          Width = 90
+          Caption = 'Load'
+          OnClick = LoadBtnClick
+          TabOrder = 0
+        end
+        object SelectAllBtn: TButton
+          AnchorSideRight.Control = DeleteBtn
+          Left = 131
+          Height = 25
+          Top = 8
+          Width = 30
+          Anchors = [akTop, akRight]
+          BorderSpacing.Right = 2
+          Caption = '*'
+          OnClick = SelectAllBtnClick
+          TabOrder = 1
+        end
+        object DeleteBtn: TButton
+          AnchorSideRight.Control = Panel4
+          AnchorSideRight.Side = asrBottom
+          Left = 163
+          Height = 25
+          Top = 8
+          Width = 90
+          Anchors = [akTop, akRight]
+          BorderSpacing.Right = 7
+          Caption = 'Delete'
+          OnClick = DeleteBtnClick
+          TabOrder = 2
+        end
+      end
+      object Splitter3: TSplitter
+        Cursor = crVSplit
+        Left = 0
+        Height = 5
+        Top = 42
+        Width = 260
+        Align = alTop
+        ResizeAnchor = akTop
+      end
+    end
+  end
+  object Splitter1: TSplitter
+    Left = 266
+    Height = 657
+    Top = 0
+    Width = 5
+  end
+  object Panel2: TPanel
+    Left = 271
+    Height = 657
+    Top = 0
+    Width = 662
+    Align = alClient
+    ClientHeight = 657
+    ClientWidth = 662
+    TabOrder = 2
+    OnResize = Panel2Resize
+    object Panel3: TPanel
+      Left = 1
+      Height = 98
+      Top = 1
+      Width = 660
+      Align = alTop
+      ClientHeight = 98
+      ClientWidth = 660
+      TabOrder = 0
+      object StartBtn: TButton
+        AnchorSideRight.Control = Panel3
+        AnchorSideRight.Side = asrBottom
+        Left = 564
+        Height = 25
+        Top = 64
+        Width = 90
+        Anchors = [akTop, akRight]
+        BorderSpacing.Right = 5
+        Caption = 'Start'
+        OnClick = StartBtnClick
+        TabOrder = 2
+      end
+      object StopBtn: TButton
+        AnchorSideRight.Control = StartBtn
+        Left = 472
+        Height = 25
+        Top = 64
+        Width = 90
+        Anchors = [akTop, akRight]
+        BorderSpacing.Right = 2
+        Caption = 'Stop'
+        OnClick = StopBtnClick
+        TabOrder = 1
+      end
+      object StringGrid1: TStringGrid
+        Left = 2
+        Height = 50
+        Top = 1
+        Width = 657
+        Align = alTop
+        BorderSpacing.Left = 1
+        BorderStyle = bsNone
+        ColCount = 2
+        DefaultRowHeight = 25
+        FixedCols = 0
+        Flat = True
+        Options = [goVertLine, goHorzLine, goEditing, goAlwaysShowEditor]
+        RowCount = 2
+        ScrollBars = ssNone
+        TabOrder = 0
+        OnEditingDone = StringGrid1EditingDone
+        ColWidths = (
+          136
+          134
+        )
+        Cells = (
+          2
+          0
+          0
+          'Login:'
+          1
+          0
+          'Password:'
+        )
+      end
+    end
+    object Splitter2: TSplitter
+      Cursor = crVSplit
+      Left = 1
+      Height = 5
+      Top = 99
+      Width = 660
+      Align = alTop
+      ResizeAnchor = akTop
+    end
+    object GroupBox1: TGroupBox
+      Left = 1
+      Height = 552
+      Top = 104
+      Width = 660
+      Align = alClient
+      Caption = 'Connection log:'
+      ClientHeight = 535
+      ClientWidth = 656
+      TabOrder = 2
+      object Memo1: TMemo
+        Left = 0
+        Height = 531
+        Top = 4
+        Width = 656
+        Align = alClient
+        BorderSpacing.Top = 4
+        BorderStyle = bsNone
+        Font.Height = -12
+        Font.Name = 'Sans'
+        ParentFont = False
+        ReadOnly = True
+        ScrollBars = ssAutoBoth
+        TabOrder = 0
+      end
+    end
+  end
+  object IniPropStorage1: TIniPropStorage
+    StoredValues = <>
+    IniFileName = '~./OpenVPN-Client/ConfigForm.ini'
+    left = 424
+    top = 136
+  end
+  object LogTimer: TTimer
+    OnTimer = LogTimerTimer
+    left = 520
+    top = 136
+  end
+  object OpenDialog1: TOpenDialog
+    Width = 965
+    Height = 585
+    Filter = 'OpenVPN Client configuration (*.ovpn)|*.ovpn'
+    Options = [ofOverwritePrompt, ofAllowMultiSelect, ofEnableSizing, ofForceShowHidden, ofViewDetail]
+    left = 320
+    top = 136
+  end
+end

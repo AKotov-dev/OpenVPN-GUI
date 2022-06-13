@@ -1,0 +1,15 @@
+[Unit]
+Description=OpenVPN Off Unit
+DefaultDependencies=no
+Before=shutdown.target reboot.target halt.target
+
+# This works because it is installed in the target and will be
+# executed before the target state is entered
+# Also consider kexec.target
+
+[Service]
+Type=oneshot
+ExecStart=/etc/openvpn/start-stop.sh 0 0 1
+
+[Install]
+WantedBy=halt.target reboot.target shutdown.target

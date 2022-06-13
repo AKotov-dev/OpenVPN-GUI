@@ -1,0 +1,10 @@
+{"version":1,"strings":[
+{"hash":7788545,"name":"confunit.sapprunning","sourcebytes":[84,104,101,32,112,114,111,103,114,97,109,32,105,115,32,97,108,114,101,97,100,121,32,114,117,110,110,105,110,103,33],"value":"The program is already running!"},
+{"hash":230107695,"name":"confunit.sdeleteconfiguration","sourcebytes":[68,101,108,101,116,101,32,116,104,101,32,115,101,108,101,99,116,101,100,32,99,111,110,102,105,103,117,114,97,116,105,111,110,63],"value":"Delete the selected configuration?"},
+{"hash":109961390,"name":"confunit.sconnectionproblems","sourcebytes":[67,111,110,110,101,99,116,105,111,110,32,112,114,111,98,108,101,109,115,46,46,46],"value":"Connection problems..."},
+{"hash":87416858,"name":"confunit.slogin","sourcebytes":[76,111,103,105,110,58],"value":"Login:"},
+{"hash":179191546,"name":"confunit.spassword","sourcebytes":[80,97,115,115,119,111,114,100,58],"value":"Password:"},
+{"hash":205278094,"name":"confunit.sballoonhint","sourcebytes":[80,108,101,97,115,101,32,119,97,105,116,46,32,79,112,101,110,105,110,103,32,116,104,101,32,97,100,100,114,101,115,115,32,111,102,32,116,104,101,32,115,112,101,99,105,102,105,101,100,32,114,101,115,111,117,114,99,101,32,105,110,32,116,104,101,32,100,101,102,97,117,108,116,32,98,114,111,119,115,101,114,46,46,46],"value":"Please wait. Opening the address of the specified resource in the default browser..."},
+{"hash":112674172,"name":"confunit.sballoontitle","sourcebytes":[79,112,101,110,105,110,103,32,116,104,101,32,85,82,76],"value":"Opening the URL"},
+{"hash":259345710,"name":"confunit.swaitconnection","sourcebytes":[87,97,105,116,105,110,103,32,102,111,114,32,97,32,99,111,110,110,101,99,116,105,111,110,46,46,46],"value":"Waiting for a connection..."}
+]}

@@ -1,0 +1,59 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: tmainform.autostartcheckbox.caption
+msgid "AutoStart"
+msgstr ""
+
+#: tmainform.caption
+msgid "OpenVPN-GUI"
+msgstr ""
+
+#: tmainform.clearbox.caption
+msgid "Сlearing the cache and cookies at GUI startup"
+msgstr ""
+
+#: tmainform.deletebtn.caption
+msgid "Delete"
+msgstr ""
+
+#: tmainform.groupbox2.caption
+msgid "Configurations list:"
+msgstr ""
+
+#: tmainform.loadbtn.caption
+msgid "Load"
+msgstr ""
+
+#: tmainform.selectallbtn.caption
+msgid "*"
+msgstr ""
+
+#: tmainform.startbtn.caption
+msgid "Start"
+msgstr ""
+
+#: tmainform.statictext1.caption
+msgid "License: GPLv3   Author: alex_q_2000 (C) 2022   URL: https://linuxforum.ru"
+msgstr ""
+
+#: tmainform.stopbtn.caption
+msgid "Stop"
+msgstr ""
+
+#: unit1.sapprunning
+msgid "The program is already running!"
+msgstr ""
+
+#: unit1.sdeleteconfiguration
+msgid "Delete the selected configuration?"
+msgstr ""
+
+#: unit1.slogin
+msgid "Login:"
+msgstr ""
+
+#: unit1.spassword
+msgid "Password:"
+msgstr ""
+

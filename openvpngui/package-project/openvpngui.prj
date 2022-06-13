@@ -1,0 +1,85 @@
+[NAME]
+name=openvpngui
+
+[VERSION]
+version=0.2
+
+[RELEASE]
+release=0.mrx9
+
+[GROUP]
+group=Applications/System
+
+[DESCRIPTION]
+0=Graphical interface for easy connection via OpenVPN (client)
+1=The program works with configurations *.ovpn
+2=...
+3=More information: /usr/share/doc/package_name/repack.txt
+
+[MAINTAINER]
+maintainer=Alex Kotov
+
+[VENDOR]
+vendor=alex_q_2000 (C) 2020
+
+[SUMMARY]
+summary=GUI for OpenVPN (Client)
+
+[URLCOPY]
+urlcopy=https://cloud.mail.ru/public/2frV/4ijowDWPQ
+
+[LICENSE]
+license=GPLv3+
+
+[DEPS]
+deps=openvpn polkit systemd
+
+[META]
+meta=0
+
+[NOARCH]
+noarch=0
+
+[SIGN]
+sign=0
+
+[DEB]
+deb=0
+
+[FILES]
+0=/usr/bin/openvpngui
+1=/usr/share/openvpngui/
+2=/usr/share/icons/openvpngui.png
+3=/usr/share/polkit-1/actions/openvpngui.policy
+4=/usr/share/applications/openvpngui.desktop
+5=/etc/openvpngui/false.pass
+6=/etc/openvpngui/update-resolv-conf
+7=/usr/share/doc/openvpngui/
+
+[AFTERINSTALL]
+0=systemctl daemon-reload
+
+[AFTERREMOVE]
+0=systemctl daemon-reload
+
+[URL32]
+url32=https://cloud.mail.ru/public/2frV/4ijowDWPQ
+
+[URL64]
+url64=https://cloud.mail.ru/public/2frV/4ijowDWPQ
+
+[PROGRAMNAME]
+programname=OpenVPN-GUI
+
+[DEVTOOL]
+devtool=Lazarus
+
+[TOOLVERSION]
+toolversion=2.2.0
+
+[INFO]
+0=To build this program, Lazarus 2.2.0 is required
+1=
+2=v0.2
+3=+ scaling in Plasma
+4=+ configurations with and without passwords

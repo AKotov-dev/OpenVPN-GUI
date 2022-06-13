@@ -1,0 +1,69 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"Last-Translator: alex_q_2000\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: ru\n"
+
+#: tmainform.autostartcheckbox.caption
+msgid "AutoStart"
+msgstr "Автостарт"
+
+#: tmainform.caption
+msgid "OpenVPN-GUI"
+msgstr ""
+
+#: tmainform.clearbox.caption
+msgid "Сlearing the cache and cookies at GUI startup"
+msgstr "Очистить кеш и cookies при старте GUI"
+
+#: tmainform.deletebtn.caption
+msgid "Delete"
+msgstr "Удалить"
+
+#: tmainform.groupbox2.caption
+msgid "Configurations list:"
+msgstr "Список конфигураций:"
+
+#: tmainform.loadbtn.caption
+msgid "Load"
+msgstr "Загрузка"
+
+#: tmainform.selectallbtn.caption
+msgid "*"
+msgstr ""
+
+#: tmainform.startbtn.caption
+msgid "Start"
+msgstr "Старт"
+
+#: tmainform.statictext1.caption
+msgid "License: GPLv3   Author: alex_q_2000 (C) 2022   URL: https://linuxforum.ru"
+msgstr "Лицензия: GPLv3   Автор: alex_q_2000 (C) 2022   URL: https://linuxforum.ru"
+
+#: tmainform.stopbtn.caption
+msgid "Stop"
+msgstr "Стоп"
+
+#: unit1.sapprunning
+msgid "The program is already running!"
+msgstr "Программа уже запущена!"
+
+#: unit1.sdeleteconfiguration
+msgid "Delete the selected configuration?"
+msgstr "Удалить выбранную конфигурацию?"
+
+#: unit1.slogin
+msgid "Login:"
+msgstr "Логин:"
+
+#: unit1.spassword
+msgid "Password:"
+msgstr "Пароль:"

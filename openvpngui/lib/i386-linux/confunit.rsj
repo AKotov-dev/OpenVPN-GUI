@@ -1,0 +1,7 @@
+{"version":1,"strings":[
+{"hash":230107695,"name":"confunit.sdeleteconfiguration","sourcebytes":[68,101,108,101,116,101,32,116,104,101,32,115,101,108,101,99,116,101,100,32,99,111,110,102,105,103,117,114,97,116,105,111,110,63],"value":"Delete the selected configuration?"},
+{"hash":229955857,"name":"confunit.sconnectionproblems","sourcebytes":[67,111,110,110,101,99,116,105,111,110,32,112,114,111,98,108,101,109,115,33,32,67,104,101,99,107,32,116,104,101,32,85,115,101,114,110,97,109,101,32,97,110,100,32,80,97,115,115,119,111,114,100,33],"value":"Connection problems! Check the Username and Password!"},
+{"hash":87416858,"name":"confunit.slogin","sourcebytes":[76,111,103,105,110,58],"value":"Login:"},
+{"hash":179191546,"name":"confunit.spassword","sourcebytes":[80,97,115,115,119,111,114,100,58],"value":"Password:"},
+{"hash":268208095,"name":"confunit.sstopquery","sourcebytes":[66,114,101,97,107,32,116,104,101,32,86,80,78,45,99,111,110,110,101,99,116,105,111,110,63],"value":"Break the VPN-connection?"}
+]}
