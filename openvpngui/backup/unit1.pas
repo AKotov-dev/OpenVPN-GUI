@@ -295,7 +295,6 @@ begin
   FileListBox1.SelectAll;
 end;
 
-//Загрузка конфигураций
 procedure TMainForm.LoadBtnClick(Sender: TObject);
 var
   i: integer;
@@ -361,13 +360,11 @@ begin
   CSVLoad;
 end;
 
-//Восстанавливаем курсор списка
 procedure TMainForm.IniPropStorage1RestoringProperties(Sender: TObject);
 begin
   FileListBox1.ItemIndex := IniPropStorage1.ReadInteger('findex', -1);
 end;
 
-//Сохраняем курсор списка
 procedure TMainForm.IniPropStorage1SaveProperties(Sender: TObject);
 begin
   INIPropStorage1.WriteInteger('findex', FileListBox1.ItemIndex);
@@ -410,14 +407,12 @@ begin
   FileListBox1.ItemIndex := IniPropStorage1.ReadInteger('findex', -1);
 end;
 
-//Автоширина Login/Password
 procedure TMainForm.Panel2Resize(Sender: TObject);
 begin
   StringGrid1.ColWidths[0] := StringGrid1.Width div 2 - 1;
   StringGrid1.ColWidths[1] := StringGrid1.ColWidths[0];
 end;
 
-//Удаление выбранных конфигураций
 procedure TMainForm.DeleteBtnClick(Sender: TObject);
 var
   i: integer;

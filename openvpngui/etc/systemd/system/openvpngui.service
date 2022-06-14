@@ -1,0 +1,17 @@
+[Unit]
+Description=OpenVPN-GUI Tunneling Application
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+PrivateTmp=true
+Type=forking
+PIDFile=/run/openvpn/openvpngui.pid
+ExecStart=/usr/sbin/openvpn --daemon --writepid /run/openvpn/openvpngui.pid \
+--config "/root/.OpenVPN-GUI/vpngate_219.100.37.182_tcp_443.ovpn" --log /var/log/openvpngui.log \
+--script-security 2 --up /etc/openvpngui/update-resolv-conf \
+--down /etc/openvpngui/update-resolv-conf \
+--mute-replay-warnings
+
+[Install]
+WantedBy=multi-user.target

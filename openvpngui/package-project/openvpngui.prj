@@ -2,7 +2,7 @@
 name=openvpngui
 
 [VERSION]
-version=0.2
+version=0.3
 
 [RELEASE]
 release=0.mrx9
@@ -80,6 +80,9 @@ toolversion=2.2.0
 [INFO]
 0=To build this program, Lazarus 2.2.0 is required
 1=
-2=v0.2
-3=+ scaling in Plasma
-4=+ configurations with and without passwords
+2=v0.3
+3=+ code optimization
+4=
+5=v0.2
+6=+ scaling in Plasma
+7=+ configurations with and without passwords
