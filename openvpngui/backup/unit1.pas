@@ -205,7 +205,7 @@ begin
     S.Add('WantedBy=multi-user.target');
     S.SaveToFile('/etc/systemd/system/openvpngui.service');
 
-    //Запуск VPN-соединения
+    //Запуск VPN-соединения (#persist-tun - освобождаем интерфейс в случае сбоя VPN)
     StartProcess('chmod 600 /etc/openvpngui/openvpngui.pass; systemctl stop openvpngui.service; '
       + 'sed -i ' + '''' + 's/^persist-tun*/#persist-tun/' + '''' +
       ' ' + FileListBox1.FileName +
