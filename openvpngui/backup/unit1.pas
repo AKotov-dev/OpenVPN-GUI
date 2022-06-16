@@ -58,6 +58,7 @@ type
     procedure StringGrid1EditingDone(Sender: TObject);
     procedure SaveLogin;
     procedure Timer1Timer(Sender: TObject);
+    procedure StartProcess(command: string);
   private
     { private declarations }
   public
@@ -83,6 +84,24 @@ uses PingTRD;
 {$R *.lfm}
 
 { TMainForm }
+
+//Общая процедура запуска команд (асинхронная)
+procedure TMainForm.StartProcess(command: string);
+var
+  ExProcess: TProcess;
+begin
+  Application.ProcessMessages;
+  ExProcess := TProcess.Create(nil);
+  try
+    ExProcess.Executable := '/bin/bash';
+    ExProcess.Parameters.Add('-c');
+    ExProcess.Parameters.Add(command);
+    //  ExProcess.Options := ExProcess.Options + [poWaitOnExit];
+    ExProcess.Execute;
+  finally
+    ExProcess.Free;
+  end;
+end;
 
 //Проверка чекбокса AutoStart
 function CheckAutoStart: boolean;
@@ -110,19 +129,31 @@ end;
 //Старт VPN-соединения
 procedure TMainForm.StartBtnClick(Sender: TObject);
 var
+  i: integer;
+  auth: boolean;
   S: TStringList;
-  output: ansistring;
 begin
-  Screen.Cursor := crHourGlass;
   StopBtn.Click;
-
-  Shape1.Brush.Color := clYellow;
-  Shape1.Repaint;
 
   try
     //Создаём файл логин/пароль
     S := TStringList.Create;
 
+    //Конфигурация содержит инструкции аутентификации?
+    S.LoadFromFile(FileListBox1.FileName);
+
+    for i := 0 to S.Count - 1 do
+    begin
+      if Trim(S[i]) = 'auth-user-pass' then
+      begin
+        auth := True;
+        break;
+      end
+      else
+        auth := False;
+    end;
+
+    S.Clear;
     S.Add(Trim(StringGrid1.Cells[0, 1]));
     S.Add(Trim(StringGrid1.Cells[1, 1]));
     S.SaveToFile('/etc/openvpngui/openvpngui.pass');
@@ -146,14 +177,8 @@ begin
     S.Add('--script-security 2 --up /etc/openvpngui/update-resolv-conf \');
     S.Add('--down /etc/openvpngui/update-resolv-conf \');
 
-    //Конфигурация содержит инструкции аутентификации?
-    Application.ProcessMessages;
-
-    RunCommand('/usr/bin/bash',
-      ['-c', '/usr/bin/bash -c "if [[ -n $(/usr/bin/grep "^auth-user-pass" "' +
-      FileListBox1.FileName + '") ]]; then echo "auth"; fi"'], output);
-
-    if Trim(output) = 'auth' then
+    //Инструкция аутентификации?
+    if auth then
     begin
       if ((Trim(StringGrid1.Cells[0, 1]) = '') or (Trim(StringGrid1.Cells[1, 1]) = ''))
       then
@@ -170,13 +195,11 @@ begin
     S.Add('WantedBy=multi-user.target');
     S.SaveToFile('/etc/systemd/system/openvpngui.service');
 
-    Application.ProcessMessages;
-    RunCommand('/usr/bin/bash',
-      ['-c', '/usr/bin/bash -c "chmod 600 /etc/openvpngui/openvpngui.pass; ' +
-      'systemctl stop openvpngui.service; systemctl daemon-reload; systemctl restart openvpngui.service"'],
-      output);
+    //Запуск VPN-соединения
+    StartProcess('chmod 600 /etc/openvpngui/openvpngui.pass; systemctl stop openvpngui.service; '
+      + 'systemctl daemon-reload; systemctl restart openvpngui.service');
+
   finally
-    Screen.Cursor := crDefault;
     S.Free;
   end;
 end;
@@ -276,17 +299,11 @@ end;
 
 //Стоп соединения
 procedure TMainForm.StopBtnClick(Sender: TObject);
-var
-  output: ansistring;
 begin
-  Screen.Cursor := crHourGlass;
-  //Останов и сброс
-  Application.ProcessMessages;
+  Shape1.Brush.Color := clYellow;
+  Shape1.Repaint;
 
-  RunCommand('/usr/bin/bash',
-    ['-c', '/usr/bin/bash -c "systemctl stop openvpngui.service"'],
-    output);
-  Screen.Cursor := crDefault;
+  StartProcess('systemctl stop openvpngui.service');
 end;
 
 //Выделить всё
@@ -295,6 +312,7 @@ begin
   FileListBox1.SelectAll;
 end;
 
+//Загрузка конфигураций
 procedure TMainForm.LoadBtnClick(Sender: TObject);
 var
   i: integer;
@@ -360,11 +378,13 @@ begin
   CSVLoad;
 end;
 
+//Восстанавливаем курсор списка
 procedure TMainForm.IniPropStorage1RestoringProperties(Sender: TObject);
 begin
   FileListBox1.ItemIndex := IniPropStorage1.ReadInteger('findex', -1);
 end;
 
+//Сохраняем курсор списка
 procedure TMainForm.IniPropStorage1SaveProperties(Sender: TObject);
 begin
   INIPropStorage1.WriteInteger('findex', FileListBox1.ItemIndex);
@@ -407,12 +427,14 @@ begin
   FileListBox1.ItemIndex := IniPropStorage1.ReadInteger('findex', -1);
 end;
 
+//Автоширина Login/Password
 procedure TMainForm.Panel2Resize(Sender: TObject);
 begin
   StringGrid1.ColWidths[0] := StringGrid1.Width div 2 - 1;
   StringGrid1.ColWidths[1] := StringGrid1.ColWidths[0];
 end;
 
+//Удаление выбранных конфигураций
 procedure TMainForm.DeleteBtnClick(Sender: TObject);
 var
   i: integer;

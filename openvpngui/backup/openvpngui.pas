@@ -7,7 +7,7 @@ uses
   cthreads,   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms,
-  Process,
+  // Process,
   unit1,
   Dialogs,
   Classes,
@@ -16,12 +16,12 @@ uses
 {$R *.res}
 
 //--- Определяем, запущена ли копия программы
-var
+{var
   PID: TStringList;
-  ExProcess: TProcess;
+  ExProcess: TProcess;}
 
 begin
-  ExProcess := TProcess.Create(nil);
+{  ExProcess := TProcess.Create(nil);
   PID := TStringList.Create;
   try
     ExProcess.Executable := 'bash';
@@ -44,7 +44,7 @@ begin
     Application.Free;
     Halt(1);
   end;
-  PID.Free;
+  PID.Free; }
 
   //---
   Application.Title:='OpenVPN-GUI v0.4';
