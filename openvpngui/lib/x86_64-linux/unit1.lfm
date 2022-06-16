@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 315
+  Left = 312
   Height = 683
-  Top = 122
+  Top = 124
   Width = 951
   ActiveControl = Panel1
   Caption = 'OpenVPN-GUI'

@@ -153,6 +153,16 @@ begin
         auth := False;
     end;
 
+    {for i := 0 to S.Count - 1 do
+    begin
+      if Trim(S[i]) = 'persist-tun' then
+      begin
+        StartProcess('sed -i ' + '''' + 's/^persist-tun*/#persist-tun/' +
+          '''' + FileListBox1.FileName);
+        break;
+      end;
+    end;}
+
     S.Clear;
     S.Add(Trim(StringGrid1.Cells[0, 1]));
     S.Add(Trim(StringGrid1.Cells[1, 1]));
@@ -197,7 +207,9 @@ begin
 
     //Запуск VPN-соединения
     StartProcess('chmod 600 /etc/openvpngui/openvpngui.pass; systemctl stop openvpngui.service; '
-      + 'systemctl daemon-reload; systemctl restart openvpngui.service');
+      + 'sed -i ' + '''' + 's/^persist-tun*/#persist-tun/' + '''' +
+      ' ' + FileListBox1.FileName +
+      '; systemctl daemon-reload; systemctl restart openvpngui.service');
 
   finally
     S.Free;
