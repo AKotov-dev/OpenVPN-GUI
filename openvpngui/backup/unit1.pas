@@ -208,8 +208,8 @@ begin
     //Запуск VPN-соединения (#persist-tun - освобождаем интерфейс в случае сбоя VPN)
     StartProcess('chmod 600 /etc/openvpngui/openvpngui.pass; systemctl stop openvpngui.service; '
       + 'sed -i ' + '''' + 's/^persist-tun*/#persist-tun/' + '''' +
-      ' ' + FileListBox1.FileName +
-      '; systemctl daemon-reload; systemctl restart openvpngui.service');
+      ' "' + FileListBox1.FileName +
+      '"; systemctl daemon-reload; systemctl restart openvpngui.service');
 
   finally
     S.Free;
