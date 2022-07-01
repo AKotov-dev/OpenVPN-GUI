@@ -133,7 +133,7 @@ var
   auth: boolean;
   S: TStringList;
 begin
-  //Если список конфигураций пуст - Выход
+  //Если список конфигураций пуст - Выход (двойной клик на списке)
   if FileListBox1.Count = 0 then Exit;
 
   StopBtn.Click;
