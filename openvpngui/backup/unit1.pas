@@ -90,7 +90,6 @@ procedure TMainForm.StartProcess(command: string);
 var
   ExProcess: TProcess;
 begin
-  Application.ProcessMessages;
   ExProcess := TProcess.Create(nil);
   try
     ExProcess.Executable := '/bin/bash';
@@ -221,21 +220,23 @@ procedure TMainForm.Timer1Timer(Sender: TObject);
 var
   LOG: TStringList;
 begin
-  LOG := TStringList.Create;
-  if FileExists('/var/log/openvpngui.log') then
-  begin
-    LOG.LoadFromFile('/var/log/openvpngui.log');
-    if LOG.Text <> Memo1.Lines.Text then
+  try
+    LOG := TStringList.Create;
+    if FileExists('/var/log/openvpngui.log') then
     begin
-      Memo1.Lines.Assign(LOG);
-      //Промотать список вниз
-      Memo1.SelStart := Length(Memo1.Text);
-      Memo1.SelLength := 0;
+      LOG.LoadFromFile('/var/log/openvpngui.log');
+      if LOG.Text <> Memo1.Lines.Text then
+      begin
+        Memo1.Lines.Assign(LOG);
+
+        //Промотать список вниз
+        Memo1.SelStart := Length(Memo1.Text);
+        Memo1.SelLength := 0;
+      end;
     end;
-  end
-  else
-    Memo1.Text := 'The logfile not found: /var/log/openvpngui.log';
-  LOG.Free;
+  finally
+    LOG.Free;
+  end;
 end;
 
 //Сохраняем логины после редактирования/копирования

@@ -61,7 +61,7 @@ object MainForm: TMainForm
         TabOrder = 0
         object LoadBtn: TButton
           Left = 6
-          Height = 30
+          Height = 34
           Top = 8
           Width = 90
           Caption = 'Load'
@@ -70,10 +70,10 @@ object MainForm: TMainForm
         end
         object SelectAllBtn: TButton
           AnchorSideRight.Control = DeleteBtn
-          Left = 127
-          Height = 30
+          Left = 123
+          Height = 34
           Top = 8
-          Width = 30
+          Width = 34
           Anchors = [akTop, akRight]
           BorderSpacing.Right = 2
           Caption = '*'
@@ -84,7 +84,7 @@ object MainForm: TMainForm
           AnchorSideRight.Control = Panel4
           AnchorSideRight.Side = asrBottom
           Left = 159
-          Height = 30
+          Height = 34
           Top = 8
           Width = 90
           Anchors = [akTop, akRight]
@@ -124,19 +124,19 @@ object MainForm: TMainForm
     OnResize = Panel2Resize
     object Panel3: TPanel
       Left = 1
-      Height = 100
+      Height = 103
       Top = 1
       Width = 684
       Align = alTop
       BevelOuter = bvNone
-      ClientHeight = 100
+      ClientHeight = 103
       ClientWidth = 684
       TabOrder = 0
       object StartBtn: TButton
         AnchorSideRight.Control = Panel3
         AnchorSideRight.Side = asrBottom
         Left = 589
-        Height = 30
+        Height = 34
         Top = 61
         Width = 90
         Anchors = [akTop, akRight]
@@ -148,7 +148,7 @@ object MainForm: TMainForm
       object StopBtn: TButton
         AnchorSideRight.Control = StartBtn
         Left = 497
-        Height = 30
+        Height = 34
         Top = 61
         Width = 90
         Anchors = [akTop, akRight]
@@ -193,7 +193,7 @@ object MainForm: TMainForm
         AnchorSideTop.Side = asrCenter
         Left = 8
         Height = 12
-        Top = 70
+        Top = 72
         Width = 16
         BorderSpacing.Left = 10
         Brush.Color = clYellow
@@ -205,7 +205,7 @@ object MainForm: TMainForm
         AnchorSideRight.Control = StopBtn
         Left = 396
         Height = 32
-        Top = 60
+        Top = 62
         Width = 91
         Anchors = [akTop, akRight]
         BorderSpacing.Right = 10
@@ -220,7 +220,7 @@ object MainForm: TMainForm
         AnchorSideRight.Control = AutoStartCheckBox
         Left = 85
         Height = 32
-        Top = 60
+        Top = 62
         Width = 306
         Anchors = [akTop, akRight]
         BorderSpacing.Right = 5
@@ -233,7 +233,7 @@ object MainForm: TMainForm
       Cursor = crVSplit
       Left = 1
       Height = 5
-      Top = 101
+      Top = 104
       Width = 684
       Align = alTop
       Beveled = True
@@ -241,8 +241,8 @@ object MainForm: TMainForm
     end
     object Memo1: TMemo
       Left = 1
-      Height = 552
-      Top = 110
+      Height = 549
+      Top = 113
       Width = 684
       Align = alClient
       BorderSpacing.Top = 4

@@ -24,6 +24,10 @@ msgstr ""
 msgid "Сlearing the cache and cookies at GUI startup"
 msgstr "Очистить кеш и cookies при старте GUI"
 
+#: tmainform.clearbox.hint
+msgid "Mageia only"
+msgstr "Только Mageia"
+
 #: tmainform.deletebtn.caption
 msgid "Delete"
 msgstr "Удалить"
