@@ -2,7 +2,7 @@
 name=openvpngui
 
 [VERSION]
-version=0.4
+version=0.5
 
 [RELEASE]
 release=0.mrx9
@@ -80,14 +80,17 @@ toolversion=2.2.0
 [INFO]
 0=To build this program, Lazarus 2.2.0 is required
 1=
-2=v0.4
-3=+ Improved response (separation of execution threads)
-4=+ Releasing the vpn interface in case of connection failures
-5=+ DblClick in the list of configurations - Start VPN
-6=
-7=v0.3
-8=+ code optimization
+2=v0.5
+3=+ Fixed: double-click on an empty configuration list
+4=
+5=v0.4
+6=+ Improved response (separation of execution threads)
+7=+ Releasing the vpn interface in case of connection failures
+8=+ DblClick in the list of configurations - Start VPN
 9=
-10=v0.2
-11=+ scaling in Plasma
-12=+ configurations with and without passwords
+10=v0.3
+11=+ code optimization
+12=
+13=v0.2
+14=+ scaling in Plasma
+15=+ configurations with and without passwords

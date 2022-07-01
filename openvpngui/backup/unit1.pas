@@ -133,6 +133,9 @@ var
   auth: boolean;
   S: TStringList;
 begin
+  //Если список конфигураций пуст - Выход
+  if FileListBox1.Count = 0 then Exit;
+
   StopBtn.Click;
 
   try
@@ -152,16 +155,6 @@ begin
       else
         auth := False;
     end;
-
-    {for i := 0 to S.Count - 1 do
-    begin
-      if Trim(S[i]) = 'persist-tun' then
-      begin
-        StartProcess('sed -i ' + '''' + 's/^persist-tun*/#persist-tun/' +
-          '''' + FileListBox1.FileName);
-        break;
-      end;
-    end;}
 
     S.Clear;
     S.Add(Trim(StringGrid1.Cells[0, 1]));
