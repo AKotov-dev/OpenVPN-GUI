@@ -29,6 +29,10 @@ msgstr ""
 msgid "Load"
 msgstr ""
 
+#: tmainform.loadbtn.hint
+msgid "Loading configurations (*.ovpn)"
+msgstr ""
+
 #: tmainform.selectallbtn.caption
 msgid "*"
 msgstr ""

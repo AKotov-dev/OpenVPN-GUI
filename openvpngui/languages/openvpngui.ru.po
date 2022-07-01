@@ -40,6 +40,10 @@ msgstr "Список конфигураций:"
 msgid "Load"
 msgstr "Загрузка"
 
+#: tmainform.loadbtn.hint
+msgid "Loading configurations (*.ovpn)"
+msgstr "Загрузить конфигурации (*.ovpn)"
+
 #: tmainform.selectallbtn.caption
 msgid "*"
 msgstr ""

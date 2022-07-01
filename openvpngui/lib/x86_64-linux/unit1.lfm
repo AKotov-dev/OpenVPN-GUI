@@ -62,10 +62,13 @@ object MainForm: TMainForm
         object LoadBtn: TButton
           Left = 6
           Height = 34
+          Hint = 'Loading configurations (*.ovpn)'
           Top = 8
           Width = 90
           Caption = 'Load'
           OnClick = LoadBtnClick
+          ParentShowHint = False
+          ShowHint = True
           TabOrder = 0
         end
         object SelectAllBtn: TButton

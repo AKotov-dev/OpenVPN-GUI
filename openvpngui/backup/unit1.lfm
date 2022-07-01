@@ -1,5 +1,5 @@
 object MainForm: TMainForm
-  Left = 315
+  Left = 316
   Height = 683
   Top = 123
   Width = 951
@@ -62,6 +62,7 @@ object MainForm: TMainForm
         object LoadBtn: TButton
           Left = 6
           Height = 34
+          Hint = 'Loading configurations (*.ovpn)'
           Top = 8
           Width = 90
           Caption = 'Load'
@@ -220,12 +221,15 @@ object MainForm: TMainForm
         AnchorSideRight.Control = AutoStartCheckBox
         Left = 85
         Height = 32
+        Hint = 'Mageia only'
         Top = 62
         Width = 306
         Anchors = [akTop, akRight]
         BorderSpacing.Right = 5
         Caption = 'Сlearing the cache and cookies at GUI startup'
         OnChange = ClearBoxChange
+        ParentShowHint = False
+        ShowHint = True
         TabOrder = 4
       end
     end
