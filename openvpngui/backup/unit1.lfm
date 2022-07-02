@@ -67,12 +67,15 @@ object MainForm: TMainForm
           Width = 90
           Caption = 'Load'
           OnClick = LoadBtnClick
+          ParentShowHint = False
+          ShowHint = True
           TabOrder = 0
         end
         object SelectAllBtn: TButton
           AnchorSideRight.Control = DeleteBtn
           Left = 123
           Height = 34
+          Hint = 'Select all'
           Top = 8
           Width = 34
           Anchors = [akTop, akRight]

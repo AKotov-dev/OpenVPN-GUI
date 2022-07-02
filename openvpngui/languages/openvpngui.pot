@@ -37,6 +37,10 @@ msgstr ""
 msgid "*"
 msgstr ""
 
+#: tmainform.selectallbtn.hint
+msgid "Select all"
+msgstr ""
+
 #: tmainform.startbtn.caption
 msgid "Start"
 msgstr ""
@@ -54,7 +58,7 @@ msgid "The program is already running!"
 msgstr ""
 
 #: unit1.sdeleteconfiguration
-msgid "Delete the selected configuration?"
+msgid "Delete the selected configurations?"
 msgstr ""
 
 #: unit1.slogin

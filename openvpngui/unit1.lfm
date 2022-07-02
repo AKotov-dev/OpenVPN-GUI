@@ -75,12 +75,15 @@ object MainForm: TMainForm
           AnchorSideRight.Control = DeleteBtn
           Left = 123
           Height = 34
+          Hint = 'Select all'
           Top = 8
           Width = 34
           Anchors = [akTop, akRight]
           BorderSpacing.Right = 2
           Caption = '*'
           OnClick = SelectAllBtnClick
+          ParentShowHint = False
+          ShowHint = True
           TabOrder = 1
         end
         object DeleteBtn: TButton

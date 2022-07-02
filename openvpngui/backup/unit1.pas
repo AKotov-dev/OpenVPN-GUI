@@ -70,7 +70,7 @@ type
 //Ресурсы перевода
 resourcestring
   SAppRunning = 'The program is already running!';
-  SDeleteConfiguration = 'Delete the selected configuration?';
+  SDeleteConfiguration = 'Delete the selected configurations?';
   SLogin = 'Login:';
   SPassword = 'Password:';
 

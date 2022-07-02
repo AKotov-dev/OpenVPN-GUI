@@ -48,6 +48,10 @@ msgstr "Загрузить конфигурации (*.ovpn)"
 msgid "*"
 msgstr ""
 
+#: tmainform.selectallbtn.hint
+msgid "Select all"
+msgstr "Выбрать все"
+
 #: tmainform.startbtn.caption
 msgid "Start"
 msgstr "Старт"
@@ -65,8 +69,8 @@ msgid "The program is already running!"
 msgstr "Программа уже запущена!"
 
 #: unit1.sdeleteconfiguration
-msgid "Delete the selected configuration?"
-msgstr "Удалить выбранную конфигурацию?"
+msgid "Delete the selected configurations?"
+msgstr "Удалить выбранные конфигурации?"
 
 #: unit1.slogin
 msgid "Login:"
