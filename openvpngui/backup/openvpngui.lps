@@ -39,9 +39,10 @@
         <Filename Value="openvpngui.pas"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="23" Y="2"/>
+        <EditorIndex Value="1"/>
+        <CursorPos Y="15"/>
         <UsageCount Value="92"/>
+        <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="unit1.pas"/>
@@ -49,15 +50,18 @@
         <ComponentName Value="MainForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
+        <TopLine Value="29"/>
         <CursorPos X="43" Y="63"/>
         <UsageCount Value="92"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="pingtrd.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="PingTRD"/>
         <EditorIndex Value="-1"/>
+        <TopLine Value="28"/>
         <CursorPos X="33" Y="3"/>
         <UsageCount Value="31"/>
       </Unit2>
@@ -79,9 +83,6 @@
         <UsageCount Value="41"/>
       </Unit4>
     </Units>
-    <General>
-      <ActiveWindowIndexAtStart Value="-1"/>
-    </General>
     <JumpHistory HistoryIndex="-1"/>
     <RunParams>
       <FormatVersion Value="2"/>
