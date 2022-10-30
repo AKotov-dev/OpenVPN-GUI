@@ -2,7 +2,7 @@
 name=openvpngui
 
 [VERSION]
-version=0.7
+version=0.8
 
 [RELEASE]
 release=0.mrx9
@@ -32,7 +32,7 @@ urlcopy=https://github.com/AKotov-dev/OpenVPN-GUI
 license=GPLv3+
 
 [DEPS]
-deps=openvpn polkit systemd fping resolvconf procps-ng
+deps=openvpn polkit systemd fping resolvconf procps-ng gtk2
 
 [META]
 meta=0
@@ -80,27 +80,32 @@ toolversion=2.2.0
 [INFO]
 0=To build this program, Lazarus 2.2.0 is required
 1=
-2=v0.7
-3=+ DNS Leak protection
-4=+ Release for Mageia-9 and higher
-5=
-6=v0.6
-7=+ Prevention the launch of the second copy of the program
-8=
-9=v0.5
-10=+ Fixed: double-click on an empty configuration list
-11=+ The message about the absence of a log file has been deleted
-12=+ Multiple configuration loading (Ctrl+Mouse)
-13=+ Сosmetic edits, hints, etc...
-14=
-15=v0.4
-16=+ Improved response (separation of execution threads)
-17=+ Releasing the vpn interface in case of connection failures
-18=+ DblClick in the list of configurations - Start VPN
+2=v0.8
+3=+ Adjusted rpm dependencies (gtk2, etc)
+4=+ Definition of DE when starting from root (kdesu/pkexec)
+5=+ RPM packages for Mageia-8 and Mageia-9
+6=
+7=v0.7
+8=+ DNS Leak protection
+9=+ Release for Mageia-9 and higher
+10=
+11=v0.6
+12=+ Prevention the launch of the second copy of the program
+13=
+14=v0.5
+15=+ Fixed: double-click on an empty configuration list
+16=+ The message about the absence of a log file has been deleted
+17=+ Multiple configuration loading (Ctrl+Mouse)
+18=+ Сosmetic edits, hints, etc...
 19=
-20=v0.3
-21=+ code optimization
-22=
-23=v0.2
-24=+ scaling in Plasma
-25=+ configurations with and without passwords
+20=v0.4
+21=+ Improved response (separation of execution threads)
+22=+ Releasing the vpn interface in case of connection failures
+23=+ DblClick in the list of configurations - Start VPN
+24=
+25=v0.3
+26=+ code optimization
+27=
+28=v0.2
+29=+ scaling in Plasma
+30=+ configurations with and without passwords

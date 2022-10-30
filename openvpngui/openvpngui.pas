@@ -47,7 +47,7 @@ begin
   PID.Free;
 
   //---
-  Application.Title:='OpenVPN-GUI v0.7';
+  Application.Title:='OpenVPN-GUI v0.8';
   RequireDerivedFormResource := True;
   Application.Scaled:=True;
   Application.Initialize;
